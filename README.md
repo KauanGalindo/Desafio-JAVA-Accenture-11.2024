@@ -5,38 +5,43 @@ This project is a Java-based application designed to manage an online course pla
 ## Database Schema
 The application uses the following database schema:
 
-1. Table: Student
-id (Primary Key, Auto-generated)
+### Table: Student
+    
+    id (Primary Key, Auto-generated)
 
-name (String)
+    name (String)
 
-email (String)
+    email (String)
 
-registrationDate (Date)
+    registrationDate (Date)
+---
+### Table: Course
+    
+    id (Primary Key, Auto-generated)
 
-2. Table: Course
-id (Primary Key, Auto-generated)
+    name (String)
 
-name (String)
+    description (String)
 
-descricao (String)
+    registrationDate (Date)
+---
+### Table: Enrollment
 
-registrationDate (Date)
+    id (Primary Key, Auto-generated)
 
-3. Table: Enrollment
-id (Primary Key, Auto-generated)
+    student_id (Foreign Key referencing Student)
 
-student_id (Foreign Key referencing Aluno)
+    course_id (Foreign Key referencing Course)
 
-course_id (Foreign Key referencing Curso)
+    registrationDate (Date)
 
-registrationDate (Date)
-
-Relationships
+## Relationships
 Student and Course have a many-to-many relationship, which is mapped using the Inscricao table.
 
 ## Implementation Requirements
-1. Controllers and Endpoints
+
+### 1. Controllers and Endpoints
+    
 Implement Spring MVC controllers to expose RESTful endpoints that allow:
 
 Registering students and courses.
@@ -47,10 +52,12 @@ Listing all courses a student is enrolled in.
 
 Listing all students enrolled in a specific course.
 
-2. Populator and DTO
+### 2. Populator and DTO
+    
 Create an EnrollmentPopulator to convert Student and Course entities into DTOs (StudenDTO, CourseDTO).
 
 Use DTOs in the Controller to avoid exposing entities directly.
 
-3. Database
+### 3. Database
+    
 Use the H2 database configured with Hibernate for development and testing purposes.
