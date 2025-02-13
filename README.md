@@ -54,7 +54,7 @@ Listing all students enrolled in a specific course.
 
 ### 2. Populator and DTO
     
-Create an EnrollmentPopulator to convert Student and Course entities into DTOs (StudenDTO, CourseDTO).
+Create an EnrollmentPopulator to convert Student and Course entities into DTOs (StudentDTO, CourseDTO).
 
 Use DTOs in the Controller to avoid exposing entities directly.
 
