@@ -17,7 +17,7 @@ registrationDate (Date)
 2. Table: Course
 id (Primary Key, Auto-generated)
 
-nome (String)
+name (String)
 
 descricao (String)
 
