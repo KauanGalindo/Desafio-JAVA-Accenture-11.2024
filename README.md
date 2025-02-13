@@ -36,7 +36,7 @@ The application uses the following database schema:
     registrationDate (Date)
 
 ## Relationships
-Student and Course have a many-to-many relationship, which is mapped using the Inscricao table.
+Student and Course have a many-to-many relationship, which is mapped using the Enrollment table.
 
 ## Implementation Requirements
 
